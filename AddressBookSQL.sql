@@ -24,4 +24,5 @@ Insert into AddressBook (FirstName,LastName,Address,City,State,Zip,PhoneNumber,E
 Insert into AddressBook (FirstName,LastName,Address,City,State,Zip,PhoneNumber,Email) values('Atif', 'Aslam', 'Bandra', 'Mumbai', 'MH', '666666', '6666666666', 'atif@gmail.com')
 
 Select * From AddressBook
+Update AddressBook Set Address='NewNagpur' Where FirstName='Shree'
 
