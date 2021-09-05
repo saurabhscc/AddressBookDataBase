@@ -26,3 +26,5 @@ Insert into AddressBook (FirstName,LastName,Address,City,State,Zip,PhoneNumber,E
 Select * From AddressBook
 Update AddressBook Set Address='NewNagpur' Where FirstName='Shree'
 
+Select * From AddressBook
+Delete from AddressBook Where FirstName='Atif'
