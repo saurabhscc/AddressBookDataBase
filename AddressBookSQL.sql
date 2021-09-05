@@ -37,3 +37,6 @@ Select * From AddressBook
 Select Count(City) as 'NumberOfContacts' from AddressBook Where City='Mumbai' Group by City
 
 Select Count(State) as 'NumberOfContacts' from AddressBook Where State='MH' Group by State
+
+Select * From AddressBook
+Select * From AddressBook Where City='Nagpur' Order by FirstName ASC
