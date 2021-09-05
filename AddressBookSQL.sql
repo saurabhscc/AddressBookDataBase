@@ -111,3 +111,35 @@ Insert Into Contact values
 
 Select * From Contact
 
+Select * From Contact c, Address a, ContactType ct
+Where c.AddressId=a.AddressId And c.ContactTypeId=ct.ContactTypeId
+
+/*UC13*-Retrive All queries UC6,UC7,UC8,UC10 */
+ /*UC6*/
+Select * From Contact
+Join Address                                                         
+on Contact.AddressId=Address.AddressId
+Where City='Nagpur' or State='KA'
+
+/*UC7*/
+Select Count(FirstName) as 'NumberOfContacts' from Contact
+Join Address 
+on Contact.AddressId=Address.AddressId 
+Where City='Mumbai' Group by City
+
+Select Count(FirstName) as 'NumberOfContacts' from Contact
+Join Address 
+on Contact.AddressId=Address.AddressId
+Where State='MH' Group by State
+
+/*UC8*/
+Select * From Contact 
+Join Address 
+on Contact.AddressId=Address.AddressId                                 
+Where City='Nagpur' Order by FirstName ASC
+
+/*UC10*/
+Select Count(FirstName) as 'NumberOfContacts' from Contact
+Join ContactType 
+on Contact.ContactTypeId=ContactType.ContactTypeId                    
+Where ContactTypeName='Friends' Group by ContactTypeName
