@@ -31,3 +31,9 @@ Delete from AddressBook Where FirstName='Atif'
 
 Select * From AddressBook
 Select * From AddressBook Where City='Nagpur' or State='KA'
+
+Select * From AddressBook
+
+Select Count(City) as 'NumberOfContacts' from AddressBook Where City='Mumbai' Group by City
+
+Select Count(State) as 'NumberOfContacts' from AddressBook Where State='MH' Group by State
