@@ -28,3 +28,6 @@ Update AddressBook Set Address='NewNagpur' Where FirstName='Shree'
 
 Select * From AddressBook
 Delete from AddressBook Where FirstName='Atif'
+
+Select * From AddressBook
+Select * From AddressBook Where City='Nagpur' or State='KA'
