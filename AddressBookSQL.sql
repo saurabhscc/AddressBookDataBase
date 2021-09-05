@@ -53,3 +53,6 @@ Update AddressBook set AddressBookName='Professional AddressBook', AddressBookTy
 
 Select * From AddressBook
 Select Count(AddressBookType)As 'NumberOfContacts' From AddressBook Where AddressBookType='Friend'
+
+Insert into AddressBook values ('Vishal', 'Sonawane', 'kasarvadavali', 'Thane', 'MH', '333333', '3333333330', 'vs@gmail.com', 'Family AddressBook', 'Family'),
+('Vishal', 'Sonawane', 'kasarvadavali', 'Thane', 'MH', '333333', '3333333330', 'vs@gmail.com', 'Friend AddressBook', 'Friend')
