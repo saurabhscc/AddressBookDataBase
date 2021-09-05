@@ -40,3 +40,13 @@ Select Count(State) as 'NumberOfContacts' from AddressBook Where State='MH' Grou
 
 Select * From AddressBook
 Select * From AddressBook Where City='Nagpur' Order by FirstName ASC
+
+
+
+Alter Table AddressBook 
+Add AddressBookName varchar(50), AddressBookType varchar(50)
+Update AddressBook set AddressBookName='Family AddressBook', AddressBookType='Family' Where FirstName='Shree'
+Update AddressBook set AddressBookName='Family AddressBook', AddressBookType='Family' Where FirstName='Jubin'
+Update AddressBook set AddressBookName='Friend AddressBook', AddressBookType='Friend' Where FirstName='Prem'
+Update AddressBook set AddressBookName='Friend AddressBook', AddressBookType='Friend' Where FirstName='Sonu'
+Update AddressBook set AddressBookName='Professional AddressBook', AddressBookType='Professional' Where FirstName='Kumar'
