@@ -50,3 +50,6 @@ Update AddressBook set AddressBookName='Family AddressBook', AddressBookType='Fa
 Update AddressBook set AddressBookName='Friend AddressBook', AddressBookType='Friend' Where FirstName='Prem'
 Update AddressBook set AddressBookName='Friend AddressBook', AddressBookType='Friend' Where FirstName='Sonu'
 Update AddressBook set AddressBookName='Professional AddressBook', AddressBookType='Professional' Where FirstName='Kumar'
+
+Select * From AddressBook
+Select Count(AddressBookType)As 'NumberOfContacts' From AddressBook Where AddressBookType='Friend'
