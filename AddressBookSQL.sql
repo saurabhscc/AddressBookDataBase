@@ -56,3 +56,58 @@ Select Count(AddressBookType)As 'NumberOfContacts' From AddressBook Where Addres
 
 Insert into AddressBook values ('Vishal', 'Sonawane', 'kasarvadavali', 'Thane', 'MH', '333333', '3333333330', 'vs@gmail.com', 'Family AddressBook', 'Family'),
 ('Vishal', 'Sonawane', 'kasarvadavali', 'Thane', 'MH', '333333', '3333333330', 'vs@gmail.com', 'Friend AddressBook', 'Friend')
+
+Use AddressBookSystem
+Create Table Address
+(
+AddressId int not null Identity(1,1) Primary key,
+Address varchar(200) not null,
+City varchar(50) not null,
+State varchar(50) not null,
+Zip bigint not null
+)
+Select * From Address;
+Insert Into Address values
+('NMRoad', 'Nagpur', 'MH', '111111'),
+('RMRoad', 'Nagpur', 'MH', '222222'),
+('kasara', 'Thane', 'MH','333333'),
+('Kailasha','Banglore', 'KA','444444'),
+('Worli', 'Mumbai', 'MH','555555')
+
+Select * From Address;
+
+
+Create Table ContactType
+(
+ContactTypeId int not null Identity(1,1) Primary key,
+ContactTypeName varchar(100) not null
+)
+select * from ContactType;
+Insert Into ContactType values
+('Family'),
+('Friends'),
+('Profession')
+
+select * from ContactType;
+
+Create Table Contact
+(
+ContactId int not null Identity(1,1) primary key,
+FirstName varchar(30) not null,
+LastName varchar(30) not null,
+PhoneNumber bigint not null,
+Email varchar(100) not null,
+AddressId int not null Foreign Key References Address(AddressId),
+ContactTypeId int not null Foreign key References ContactType(ContactTypeId)
+)
+Select * From Contact
+
+Insert Into Contact values
+('Shree', 'Patil','1111111111','shree@gmail.com','1','1'),
+('Prem', 'Kumar','2222222222','prem@gmail.com','2','2'),
+('Sonu', 'Nigam','3333333333','sonu@gmail,com','3','2'),
+('Kumar', 'Sanu','4444444444','kumar@gmail,com','4','3'),
+('Jubin', 'Nautiyaal','5555555555','jubin@gmail,com','5','1')
+
+Select * From Contact
+
